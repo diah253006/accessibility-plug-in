@@ -38,8 +38,8 @@
         //    "bundle/teks1.bundle.js"
         //];
         const scripts = [
-            BASE + "bundle/tampilan.bundle.js",
-            BASE + "bundle/teks.bundle.js"
+            BASE + "tampilan.bundle.js",
+            BASE + "teks.bundle.js"
         ];
 
         let loaded = 0;
