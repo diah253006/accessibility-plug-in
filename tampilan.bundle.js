@@ -60,19 +60,43 @@
         }
     };
 
-    const Visual = {
-        toggleMono(target = "body") {
+    const Mono = {
+        toggle(target = "body") {
             const el = document.querySelector(target);
             if (!el) return;
-
+    
             el.classList.toggle("monochrome");
-        },
+    
+            if (window.speechSynthesis) {
+                speechSynthesis.cancel();
+                const msg = new SpeechSynthesisUtterance(
+                    el.classList.contains("monochrome")
+                    ? "Monochrome diaktifkan"
+                    : "Monochrome dimatikan"
+                );
+                msg.lang = "id-ID";
+                speechSynthesis.speak(msg);
+            }
+        }
+    };
 
-        toggleCursor(target = "body") {
+    const Cursor = {
+        toggle(target = "body") {
             const el = document.querySelector(target);
             if (!el) return;
-
+    
             el.classList.toggle("big-cursor");
+    
+            if (window.speechSynthesis) {
+                speechSynthesis.cancel();
+                const msg = new SpeechSynthesisUtterance(
+                    el.classList.contains("big-cursor")
+                    ? "Big cursor diaktifkan"
+                    : "Big cursor dimatikan"
+                );
+                msg.lang = "id-ID";
+                speechSynthesis.speak(msg);
+            }
         }
     };
 
@@ -80,7 +104,9 @@
     window.APR_IMAGES = Images;
     window.APR_CONTRAST = Contrast;
     window.APR_ANIMATION = Animation;
-    window.APR_VISUAL = Visual;
+    window.APR_MONO = Mono;
+    window.APR_CURSOR = Cursor;
+    //window.APR_VISUAL = Mono;
 
     console.log("TAMPILAN CLEAN READY");
 
