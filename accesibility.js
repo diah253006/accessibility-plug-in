@@ -14,7 +14,9 @@
     };
     window.APR_STATE = STATE;
 
-    const BASE = "https://cdn.jsdelivr.net/gh/diah253006/accessibility-plug-in@1.0.0/";
+    //const BASE = "https://cdn.jsdelivr.net/gh/diah253006/accessibility-plug-in@1.0.0/";
+
+    const BASE = new URL('.', document.currentScript.src).href;
 
     // =============================
     // LOAD CSS
