@@ -377,3 +377,5 @@
     }
 
 })();
+
+window.addEventListener("load", init);
