@@ -34,6 +34,8 @@
     css.onerror = loadScripts;
     document.head.appendChild(css);
 
+    setTimeout(init, 0);
+
     // =============================
     // LOAD BUNDLES (NO DUPLICATE)
     // =============================
@@ -378,4 +380,4 @@
 
 })();
 
-window.addEventListener("load", init);
+//window.addEventListener("load", init);
