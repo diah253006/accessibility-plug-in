@@ -28,7 +28,10 @@
     //css.href = "aksesibilitas.css";
     css.href = BASE + "aksesibilitas.css";
 
-    css.onload = () => loadScripts();
+    //css.onload = () => loadScripts();
+
+    css.onload = loadScripts;
+    css.onerror = loadScripts;
     document.head.appendChild(css);
 
     // =============================
