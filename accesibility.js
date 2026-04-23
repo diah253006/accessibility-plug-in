@@ -14,7 +14,6 @@
     };
     window.APR_STATE = STATE;
 
-
     const BASE = "https://cdn.jsdelivr.net/gh/diah253006/accessibility-plug-in@latest/";
 
     // =============================
@@ -24,7 +23,6 @@
     css.rel = "stylesheet";
     //css.href = "aksesibilitas.css";
     css.href = BASE + "aksesibilitas.css";
-
 
     css.onload = () => loadScripts();
     document.head.appendChild(css);
@@ -37,6 +35,7 @@
         //    "bundle/tampilan1.bundle.js",
         //    "bundle/teks1.bundle.js"
         //];
+
         const scripts = [
             BASE + "tampilan.bundle.js",
             BASE + "teks.bundle.js"
@@ -89,37 +88,25 @@
             }
 
             // ===== TAMPILAN =====
+
             if (btn.dataset.aprImages !== undefined) {
-                STATE.images = !STATE.images;
-                document.body.classList.toggle("hide-images");
-                speak(STATE.images ? "Gambar disembunyikan" : "Gambar ditampilkan");
-                return;
+                window.APR_IMAGES.toggle();
             }
 
             if (btn.dataset.aprContrast !== undefined) {
-                STATE.contrast = !STATE.contrast;
-                document.body.classList.toggle("high-contrast");
-                speak(STATE.contrast ? "Kontras tinggi aktif" : "Mode normal aktif");
-                return;
+                window.APR_CONTRAST.toggle();
             }
 
             if (btn.dataset.aprAnimation !== undefined) {
-                STATE.animationPaused = !STATE.animationPaused;
-                document.body.classList.toggle("reduce-motion");
-                speak(STATE.animationPaused ? "Animasi dimatikan" : "Animasi diaktifkan");
-                return;
+                window.APR_ANIMATION.toggle();
             }
 
             if (btn.dataset.aprMonochrome !== undefined) {
-                STATE.mono = !STATE.mono;
-                document.body.classList.toggle("monochrome");
-                return;
+                window.APR_MONO.toggle();
             }
 
             if (btn.dataset.aprCursor !== undefined) {
-                STATE.cursor = !STATE.cursor;
-                document.body.classList.toggle("big-cursor");
-                return;
+                window.APR_CURSOR.toggle();
             }
 
             // ===== FONT =====
