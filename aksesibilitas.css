@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .apr-1303223025-panel {
     position: fixed;
     right: 0;
@@ -231,3 +232,238 @@
 .font-dyslexic * {
     font-family: 'Lexend', Arial, sans-serif !important;
 }
+=======
+.apr-1303223025-panel {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 240px;
+
+    background: #f1f1f1;
+    z-index: 9999;
+
+    padding: 8px;
+    overflow-y: auto;
+
+    transform: translateX(100%);
+    transition: 0.3s ease;
+}
+
+.apr-1303223025-panel:not(.hide) {
+    transform: translateX(0);
+}
+
+/* HEADER */
+.apr-1303223025-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    border: 2px solid #000;
+    padding: 5px;
+    margin-bottom: 10px;
+    background: #ddd;
+
+}
+
+.apr-1303223025-header button {
+    background: transparent;
+    color: white;
+    border: none;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* TAB (ICON ♿) */
+.apr-1303223025-tab {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    width: 55px;
+    height: 55px;
+    background: #2563eb;
+    color: white;
+
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 9999;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.apr-1303223025-tab:hover {
+    background: #1a3fcc;
+}
+
+/* BODY KOLOM */
+.apr-1303223025-body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.apr-1303223025-body button {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 8px;
+    text-align: left;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: none;
+    background: #f3f3f3;
+    cursor: pointer;
+    font-size: 12px;
+
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.apr-1303223025-body label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.apr-1303223025-body button:hover {
+    background: #2d5bff;
+    color: white;
+}
+
+/* CONTRAST */
+/*.high-contrast {
+    background: #000 !important;
+    color: #fff !important;
+}*/
+
+.high-contrast {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+.high-contrast a {
+    color: #00ffff !important;
+}
+
+.high-contrast button {
+    background: #000 !important;
+    color: #fff !important;
+    border: 2px solid #fff !important;
+}
+
+/* MONO */
+.monochrome {
+    filter: grayscale(100%);
+}
+
+/* HIDE IMAGES */
+.hide-images img {
+    display: none !important;
+}
+
+/* BIG CURSOR */
+.big-cursor,
+.big-cursor * {
+    cursor: url('https://cur.cursors-4u.net/cursors/cur-2/cur116.cur'), auto !important;
+}
+
+/* REDUCE MOTION */
+.reduce-motion * {
+    animation: none !important;
+    transition: none !important;
+}
+
+.apr-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 2px solid #000;
+    padding: 4px;
+    font-size: 13px;
+    margin-bottom: 6px;
+    background: #ddd;
+}
+
+.apr-header button {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* SECTION */
+.apr-section {
+    margin-bottom: 6px;
+}
+
+.apr-section h4 {
+    font-size: 12px;
+    margin: 4px 0;
+}
+
+/* BUTTON STYLE (INI KUNCI) */
+.apr-section button {
+    display: block;
+    width: 100%;
+
+    padding: 6px;
+    margin-bottom: 4px;
+
+    font-size: 11px;
+    border: 1.5px solid #000;
+    background: #eaeaea;
+
+    text-align: center;
+    cursor: pointer;
+}
+
+/* HOVER */
+.apr-section button:hover {
+    background: #ccc;
+}
+
+.apr-section.collapsed button {
+    display: none;
+}
+
+.bounce {
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.reduce-motion .bounce {
+    animation: none !important;
+    transform: translateY(0) !important;
+}
+
+/* SANS */
+.font-sans,
+.font-sans * {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+/* SERIF */
+.font-serif,
+.font-serif * {
+    font-family: Georgia, "Times New Roman", serif !important;
+}
+
+/* DYSLEXIC */
+.font-dyslexic,
+.font-dyslexic * {
+    font-family: 'Lexend', Arial, sans-serif !important;
+}
+>>>>>>> d04bfe6 (init accessibility-plug-in)
