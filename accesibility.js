@@ -78,7 +78,7 @@
 
         attachEventRouter();
     }
-
+    console.log("INIT CALLED");
     // =============================
     // SINGLE EVENT ROUTER
     // =============================
